@@ -78,17 +78,18 @@ const Header = () => {
         />
       </div>
       <div className="flex gap-4 items-center">
-        <Link to="/" className='items-centers text-center'><Home/>Home</Link>
+        <Link to="/" className='items-centers text-center !text-white'><Home/>Home</Link>
         <Link
           to="/login"
-          className="flex gap-2 !bg-white hover:bg-purple-400 text-black transition px-4 py-2 rounded"
+          className="flex gap-2 !bg-teal-600 hover:bg-teal-700 !text-white transition px-4 py-2 rounded-full"
           aria-label="Go to login page"
         >
           <Login /> Login
         </Link>
         <Link
           to="/signup"
-          className="flex gap-2 !bg-purple-400 hover:bg-purple-500 text-white transition px-4 py-2 rounded"
+          className="flex gap-2 !bg-teal-600 hover:bg-teal-700 !text-white transition px-4 py-2 rounded-full"
+         
           aria-label="Go to signup page"
         >
           Sign Up
