@@ -37,6 +37,16 @@ import MostBooked from "./components/Book";
 import Footer from "./components/Footer";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
+import AdminLogin from './components/admin/adminLogin';
+import AdminLayout from './components/admin/adminLayout';
+import AdminDashboard from './components/admin/adminDashboard';
+import AdminLoginPage from "../pages/admin/AdminLoginPage";
+import AdminDashboardPage from "../pages/admin/AdminDashboardPage";
+import AdminUsersPage from "../pages/admin/AdminUsers";
+import AdminEmployeesPage from "../pages/admin/AdminEmployees";
+import AdminBookingsPage from "../pages/admin/AdminBookings";
+
+
 
 function App() {
   return (
@@ -47,6 +57,21 @@ function App() {
           path="/"element={<><Main1 /><Main /><Hero /><MostBooked /><Footer /></> }/>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/admin/login" element={<AdminLoginPage />} />
+        <Route path="/admin/dashboard" element={<AdminDashboardPage />} />
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin/dashboard" element={
+           <AdminLayout>
+               <AdminDashboard />
+           </AdminLayout>
+      } />
+      <Route path="/admin/users" element={<AdminUsersPage />} />
+      <Route path="/admin/employees" element={<AdminEmployeesPage />} />
+      <Route path="/admin/bookings" element={<AdminBookingsPage />} />
+
+
+
+        
       </Routes>
     </div>
   );
